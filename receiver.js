@@ -5,6 +5,14 @@ import { createTvApp } from './tv-app.js';
 const NAMESPACE = 'urn:x-cast:com.gafab.gameserver';
 
 const app = createTvApp({ base: document.baseURI });
+
+// Fuera de un Chromecast el framework no arranca: con ?debug se puede probar en un navegador
+// llamando a `tv.handle({...})` desde la consola.
+if (new URLSearchParams(location.search).has('debug')) {
+  window.tv = app;
+  throw new Error('Modo debug: CAF no iniciado');
+}
+
 const context = cast.framework.CastReceiverContext.getInstance();
 
 context.addCustomMessageListener(NAMESPACE, (event) => {
