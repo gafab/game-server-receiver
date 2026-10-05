@@ -1,0 +1,31 @@
+[data-phase="wait"] { --phase: #c62828; }
+[data-phase="go"] { --phase: #2e7d32; }
+[data-phase="result"] { --phase: #37474f; }
+[data-phase="final"] { --phase: #4527a0; }
+
+/* ---- Jugador ---- */
+.rx { display: flex; flex-direction: column; gap: 12px; height: calc(100vh - 32px); }
+.rx-pad {
+  flex: 1; min-height: 45vh; width: 100%;
+  background: var(--phase, #37474f); color: #fff;
+  font-size: 2.4rem; font-weight: 800; border-radius: 24px;
+  touch-action: manipulation; user-select: none; -webkit-user-select: none;
+  transition: background 80ms;
+}
+.rx-bar { display: flex; justify-content: space-between; font-size: 1.2rem; }
+.rx-board { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.rx-board li, .rxtv-scores li { display: flex; justify-content: space-between; background: var(--bg-2); padding: 8px 14px; border-radius: 10px; }
+.rx-board li.off, .rxtv-scores li.off { opacity: 0.45; }
+
+/* ---- TV ---- */
+.rxtv { display: grid; grid-template-columns: 2fr 1fr; height: 100vh; }
+.rxtv-stage {
+  background: var(--phase, #37474f); transition: background 80ms;
+  display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 2vh;
+}
+.rxtv-round { font-size: 2.4rem; opacity: 0.85; }
+.rxtv-big { font-size: 9rem; font-weight: 900; line-height: 1; }
+.rxtv-sub { font-size: 2.4rem; min-height: 1.2em; }
+.rxtv-side { padding: 4vh 2vw; overflow: hidden; }
+.rxtv-side h2 { font-size: 2.4rem; }
+.rxtv-scores { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 2rem; }

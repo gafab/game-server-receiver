@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Game Server</title>
+  <link rel="stylesheet" href="common.css">
+  <script src="https://www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"></script>
+</head>
+<body class="tv">
+  <!-- Mismo markup que app/src/main/assets/web/tv.html -->
+  <section id="lobby" class="screen tv-lobby">
+    <div class="tv-join">
+      <h1>¡Únete!</h1>
+      <img id="qr" alt="Código QR para unirse" class="hidden">
+      <p id="joinUrl" class="url"></p>
+      <p class="muted">Escanea el código o abre la dirección en el navegador de tu celular</p>
+    </div>
+    <div class="tv-players">
+      <h2>Jugadores <span id="count"></span></h2>
+      <ul id="players" class="chips big"></ul>
+    </div>
+  </section>
+
+  <section id="game" class="screen hidden"></section>
+
+  <script type="module" src="receiver.js"></script>
+</body>
+</html>
