@@ -1,0 +1,38 @@
+/* ---- Jugador ---- */
+.lq { display: flex; flex-direction: column; gap: 12px; }
+.lq-top { display: flex; justify-content: space-between; font-size: 1.1rem; }
+.lq-q { margin: 0.2em 0; line-height: 1.25; }
+.lq-vote { display: flex; justify-content: space-between; gap: 12px; background: var(--bg-2); color: var(--fg); border: 2px solid transparent; }
+.lq-vote span { font-weight: 400; }
+.lq-vote.picked { border-color: var(--accent); background: #3a2d66; }
+.lq-vote:disabled { opacity: 0.45; }
+.lq-skip { background: transparent; color: var(--muted); border: 1px solid #3a2d66; font-size: 1rem; }
+.lq-result { text-align: center; }
+.lq-result.caught h2 { color: #66d08a; }
+.lq-result.escaped h2 { color: #ff8a65; }
+.lq-delta { font-size: 1.4rem; font-weight: 800; color: var(--accent); }
+.lq-board ol, .lqtv-scores { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.lq-board li, .lqtv-scores li { display: flex; justify-content: space-between; background: var(--bg-2); padding: 8px 14px; border-radius: 10px; }
+.lq-board li.off, .lqtv-scores li.off { opacity: 0.45; }
+
+/* ---- TV ---- */
+.lqtv { display: grid; grid-template-columns: 2.4fr 1fr; height: 100vh; }
+.lqtv-stage { padding: 5vh 4vw; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 3vh; }
+.lqtv-stage h1 { font-size: 4.5rem; margin: 0; }
+.lqtv-stage h1.caught { color: #66d08a; }
+.lqtv-stage h1.escaped { color: #ff8a65; }
+.lqtv-round { font-size: 2rem; color: var(--muted); }
+.lqtv-sub { font-size: 2rem; margin: 0; }
+.lqtv-q { background: #f4f1ff; color: #1a1033; font-size: 3rem; font-weight: 800; padding: 3vh 3vw; border-radius: 18px; max-width: 90%; }
+.lqtv-q.small { font-size: 2rem; }
+.lqtv-answers { display: grid; grid-template-columns: repeat(auto-fit, minmax(14vw, 1fr)); gap: 16px; width: 100%; }
+.lqtv-card { background: var(--bg-2); border-radius: 16px; padding: 2vh 1vw; display: flex; flex-direction: column; gap: 8px; }
+.lqtv-card .nick { color: var(--muted); font-size: 1.6rem; }
+.lqtv-card .ans { font-size: 2.6rem; font-weight: 800; word-break: break-word; }
+.chips li.done { background: #2e7d32; }
+.lqtv-tally { list-style: none; padding: 0; margin: 0; width: 70%; display: flex; flex-direction: column; gap: 8px; font-size: 1.8rem; }
+.lqtv-tally li { display: grid; grid-template-columns: 30% 1fr 3ch; align-items: center; gap: 12px; text-align: left; }
+.lqtv-tally .bar { height: 1.2em; width: calc(var(--n) * 12%); min-width: 4px; background: var(--accent); border-radius: 6px; }
+.lqtv-side { padding: 4vh 2vw; background: #140c29; }
+.lqtv-side h2 { font-size: 2.4rem; margin-bottom: 0; }
+.lqtv-scores { font-size: 2rem; margin-top: 2vh; }
