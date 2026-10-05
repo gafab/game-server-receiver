@@ -65,8 +65,8 @@ button:active { transform: scale(0.98); }
 .toast { bottom: 24px; background: var(--fg); color: var(--bg); max-width: 90vw; }
 
 .host-stop {
-  position: fixed; right: 20px; top: 20px; z-index: 5;
-  font-size: 0.85rem; padding: 6px 10px; background: rgba(0, 0, 0, 0.35); color: #fff;
+  display: block; margin: 24px auto 8px;
+  font-size: 0.9rem; padding: 8px 14px; background: transparent; color: var(--muted); border: 1px solid #3a2d66;
 }
 
 /* ---- TV ---- */
